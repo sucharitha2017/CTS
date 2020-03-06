@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="login-page.css" />
+
+    <script>
+        function che()
+        {
+            var tname = document.trainlist.to.value;
+            var dest = document.trainlist.from.value;
+
+            if (tname == "Hyderabad" && dest == "Chennai")
+            {
+                
+                return true;
+            }
+            else {
+                alert("Unsupported Journey");
+                return false;
+
+            }
+         }
+    </script>
+
+</head>
+<body style="background-image:url('images/train.jpg')">
+
+    <div class="login-page">
+        <h3>Search Train</h3>
+        <br />
+
+        <form name="trainlist" id="my" action="Image.html" onsubmit="return che()">
+            <table>
+                <tr>
+                    <td>
+                        Destination:
+                    </td>
+                    <td>
+                        <input type="text" name="to" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Source:
+                    </td>
+                    <td>
+                        <input type="text" name="from" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Date:
+                    </td>
+                    <td>
+                        <input type="date" name="tdate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" name="Submit" value="Submit" />
+                    </td>
+                </tr>
+            </table>
+            
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
